@@ -34,7 +34,6 @@ const App = () => {
     }
 
   }
-
   const handleMinusNumbers = () => {
 
     if(firstNumber === '0'){
@@ -59,6 +58,12 @@ const App = () => {
           case '-':
             handleMinusNumbers();
             break;
+            case '/':
+            handleMinusNumbers();
+            break;
+            case '.':
+            handleMinusNumbers();
+            break;
           default: 
             break;
         }
@@ -71,7 +76,7 @@ const App = () => {
       <Content>
         <Input value={currentNumber}/>
         <Row>
-          <Button label="x"/>
+          <Button label="0" onClick={() => handleAddNumber('0')}/>
           <Button label="/"/>
           <Button label="c" onClick={handleOnClear}/>
           <Button label="."/>
